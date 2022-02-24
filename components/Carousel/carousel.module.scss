@@ -1,0 +1,59 @@
+@import '../../styles/variable.scss';
+
+.carouselWrap {
+    display: block;
+    max-width: $def-max-width;
+    position: relative;
+    border-radius: 10px;
+    min-height: 50px;
+    padding-bottom: 66px;
+    .landingSlide {
+        > div {
+            border-radius: 10px;
+            border: 1px solid #e5e8eb;
+            box-shadow: none;
+            overflow: hidden;
+        }
+        .innerSlide {
+            display: flex;
+            padding: 0;
+            width: 100%;
+        }
+        .landingDots {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            position: absolute;
+            left:0;
+            right: 0;
+            bottom: -66px;
+            li {
+                display: inline;
+                padding: 0 5px;
+                height: 10px;
+                &.slick-active {
+                    button {
+                        opacity: 1 !important;
+                    }
+                }
+                button {
+                    background-color: $black-color;
+                    border-radius: 50%;
+                    font-size: 0;
+                    line-height: 0;
+                    height: 7px;
+                    width: 7px;
+                    outline: none;
+                    border: none;
+                    padding: 0;
+                    opacity: 0.25;
+                    vertical-align: super;
+                    cursor: pointer;
+                }
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import "../../styles/variable.scss";
+
+// common styles 
+.flexAuto {
+    flex: 1 auto;
+}
+.borderRight {
+    border-right: 1px solid #E6E8EC;
+}
+
+.navWrap {
+    max-width: $def-max-width;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 30px;
+    > span {
+        align-self: center;
+    }
+    .logo {
+        display: block;
+        margin-right: 35px;
+        > span {
+            vertical-align: middle;
+        }
+    }
+    .spnSubpagesWrap {
+        flex: 1 auto;
+        ul {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            padding: 0;
+            align-items: center;        
+            li {
+                flex: 1 auto;
+                list-style-type: none;
+                display: inline;
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    line-height: 36px;
+                    text-decoration: none;
+                    color: $text-color;
+                    font-weight: 700;
+                    transition: all 0.3s ease;
+                    font-size: 14px;
+                    &:hover {
+                        color: $black-color;
+                    }
+                    svg {
+                        vertical-align: middle;
+                    }
+                    &.wallet {
+                        border: 1px solid #e6e8ec ;
+                        border-radius: 20px;
+                        color: $text-active-color;
+                        &:hover {
+                            background-color: $text-active-color;
+                            color: #FCFCFD;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.navWrapMobile {
+    width: 100%;
+    max-width: $def-max-width;
+    margin: 0 auto;
+    display: none;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
+}

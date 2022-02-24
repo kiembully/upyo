@@ -1,0 +1,37 @@
+@import '../../styles/variable.scss';
+
+.landingWrap {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    .spnLandingInner {
+        flex: 1 auto;
+        text-align: center;
+        position: relative;
+        width: 50%;
+        min-height: 200px;
+        &:first-child {
+            background-color: transparent;
+            @media screen and (max-width: 768px) {
+                width: 40%;
+            }
+            @media screen and (max-width: 576px) {
+                width: 100%;
+                display: block;
+            }
+        }
+        &:last-child {
+            background-color: $white-color;
+            @media screen and (max-width: 768px) {
+                width: 60%;
+            }
+            @media screen and (max-width: 576px) {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    @media screen and (max-width: 576px) {
+        display: block;
+    }
+}

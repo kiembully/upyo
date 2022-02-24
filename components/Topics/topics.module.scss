@@ -1,0 +1,114 @@
+@import '../../styles/variable.scss';
+
+// common styles
+.flexWrap {
+    flex: 1 auto;
+}
+
+// Topic index 
+.topicWrap {
+    display: block;
+    max-width: $def-max-width;
+    margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+        padding: 0 15px;
+    }
+    .searchWrap {
+        display: flex;
+        width: 100%;
+        padding-bottom: 32px;
+        margin-bottom: 48px;
+        border-bottom: 1px solid #E6E8EC;
+        input {
+            flex: 1 auto;
+            border-radius: 0;
+            background: none;
+            border: none;
+            font-size: 24px;
+            line-height: 48px;
+            font-weight: 600;
+            letter-spacing: -.01em;
+            color: #23262F;
+            outline: none;
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+            }
+        }
+        span {
+            height: 48px;
+            width: 48px;
+            background-color: #3772FF;
+            border-radius: 50%;
+            display: flex;
+            svg {
+                color: $white-color;
+                display: block;
+                margin: auto;
+                font-size: 30px;
+            }
+        }
+    }
+    .filterWrap {
+        display: flex;
+        width: 100%;
+        margin-bottom: 64px;
+        ul.ulFilter {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            li {
+                padding: 0 3px;
+                button {
+                    padding: 6px 12px;
+                    color: $text-color;
+                    text-transform: capitalize;
+                    background-color: transparent;
+                    border-radius: 14px;
+                    font-size: 14px;
+                    line-height: 1.14286;
+                    &.active {
+                        color: $white-color;
+                        background-color: $text-active-color
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Topic List 
+.topicListWrap {
+    display: flex;
+    flex-flow: wrap;
+    .topicOuter {
+        display: flex;
+        width: 100%;
+        max-width: 33.33%;
+        @media screen and (max-width: 1200px) {
+            max-width: 50%;
+        }
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+        a {
+            margin: 32px 16px 0 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+// Single Topic 
+.topicInner {
+    display: flex;
+    .imgWrap {
+        min-height: 200px;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+}
